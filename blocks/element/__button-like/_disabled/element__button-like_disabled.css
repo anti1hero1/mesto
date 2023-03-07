@@ -1,0 +1,4 @@
+.element__button-like_disabled{
+    background-image: url('../../../../images/svg/disabled-heart.svg');
+    background-size: cover;
+}

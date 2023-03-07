@@ -1,20 +1,18 @@
-# Проект: Место
+Путешествие по России
 
-### Обзор
+Адаптивный сайт, по макету Figma Russian-Travels
 
-* Figma
-* Картинки
+Макет Figma по ссылке ( https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-%2B-mobile?node-id=28503%3A0&t=CoGDzy7pCSkBUm4W-0 )
 
-**Figma**
+Сайт оптимизирован для просмотра на экранах от 320 до 1280 пикселей
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+При вёрстке использован подход Desktop First
 
-**Картинки**
+В этом проекте применили свойства для HTML и CSS такие как:
+Flexbox-вёрстка
+Grid-вёрстка
+@media-медиазапросы
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+Ссылка на проект ( https://anti1hero1.github.io/russian-travel/ )
 
-Удачи!
- 
 
-testtttttttttttttttttttt
