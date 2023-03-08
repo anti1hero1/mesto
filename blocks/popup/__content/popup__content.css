@@ -1,0 +1,14 @@
+.popup__content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 37px;
+    left: 36px;
+    gap: 30px;
+}
+@media screen and (max-width: 920px) {
+    .popup__content {
+        bottom: 30px;
+        left: 22px;
+    }
+}
