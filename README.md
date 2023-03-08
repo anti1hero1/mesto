@@ -1,18 +1,9 @@
-Путешествие по России
+Проектная работа Место
+По макету https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?t=C6NrOhkapuQwgA6q-0
+Проектная работа четвертого спринта
 
-Адаптивный сайт, по макету Figma Russian-Travels
+Использовались технологии: html, css, flexbox, grid layout, БЭМ, Nested, адаптивная верстка, javascript.
 
-Макет Figma по ссылке ( https://www.figma.com/file/5S2WSbEFL6awjVWJ0NWL8Q/Sprint-3_-Russia-_-desktop-%2B-mobile?node-id=28503%3A0&t=CoGDzy7pCSkBUm4W-0 )
-
-Сайт оптимизирован для просмотра на экранах от 320 до 1280 пикселей
-
-При вёрстке использован подход Desktop First
-
-В этом проекте применили свойства для HTML и CSS такие как:
-Flexbox-вёрстка
-Grid-вёрстка
-@media-медиазапросы
-
-Ссылка на проект ( https://anti1hero1.github.io/russian-travel/ )
+Ссылка на проект ( https://anti1hero1.github.io/mesto/ )
 
 
