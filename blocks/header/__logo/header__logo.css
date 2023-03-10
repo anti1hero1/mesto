@@ -2,7 +2,6 @@
   width: 142px;
   height: 33px;
   display: block;
-  object-fit: cover;
 }
 
 @media screen and (max-width: 920px) {
@@ -10,6 +9,5 @@
     width: 103.74px;
     height: 24.4px;
     margin-left: 27px;
-    
   }
 }

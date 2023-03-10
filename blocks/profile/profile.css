@@ -8,9 +8,9 @@
 }
 @media screen and (max-width: 920px) {
   .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: minmax(200px, 1fr);
+        grid-auto-flow: row;
+        justify-items: center;
+        align-items: center;
   }
 }
