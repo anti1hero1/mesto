@@ -9,7 +9,8 @@
   cursor: pointer;
   background-image: url(../../../images/svg/plus.svg);
   background-size: auto;
-
+  border: 2px solid #FFFFFF;
+  border-radius: 2px;  
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
