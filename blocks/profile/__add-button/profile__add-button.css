@@ -7,8 +7,9 @@
   margin-bottom: 35px;
   margin-left: 244px;
   cursor: pointer;
-  background-image: url(../../../images/svg/Button+.svg);
-  border: none;
+  background-image: url(../../../images/svg/plus.svg);
+  background-size: auto;
+
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: contain;
