@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Место</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
+
 <body class="page">
   <header class="header">
     <img class="header__logo" alt="Логотип сайта Место" src="./images/svg/logo.svg">
@@ -22,20 +24,20 @@
     </section>
 
     <section class="elements" aria-label="Карточки мест">
-<template id="elementTemplate">
-      <ul class="element">
-        <li class="element__item">
-          <img class="element__image">
-          <div class="element__image-info">
-            <h2 class="element__title"></h2>
-            <button class="element__like" type="button"></button>
-            <button class="element__image-basket" type="button" ></button>
-          </div>
-        </li>
-      </ul>
-    </template>
-  </section>
-  
+      <template id="elementTemplate">
+        <ul class="element">
+          <li class="element__item">
+            <img class="element__image">
+            <div class="element__image-info">
+              <h2 class="element__title"></h2>
+              <button class="element__like" type="button"></button>
+              <button class="element__image-basket" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </template>
+    </section>
+
   </main>
   <footer class="footer">
     <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
@@ -45,45 +47,53 @@
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
 
-      <form class="popup__form" name="formPopup">
-        <input name="namePopup" type="text" placeholder="Имя" class="popup__input popup__input_type_name" >
+      <form class="popup__form" name="formPopup" novalidate>
+        <input id="edit-name" name="namePopup" type="text" placeholder="Имя" class="popup__input popup__input_type_name"
+          minlength="2" maxlength="40" required>
+        <span class="popup__error edit-name-error"></span>
 
-        <input name="jobPopup" type="text" placeholder="О себе" class="popup__input popup__input_type_job">
+        <input id="edit-job" name="jobPopup" type="text" placeholder="О себе" class="popup__input popup__input_type_job"
+          minlength="2" maxlength="200" required>
+        <span class="popup__error edit-job-error"></span>
 
         <button class="popup__button-save" type="submit" name="submit">Сохранить</button>
       </form>
-<button class="popup__close" type="button"></button>
+      <button class="popup__close" type="button"></button>
     </div>
   </section>
 
   <section class="popup popup_add-card" aria-label="Попап добавление карточек">
 
-  <div class="popup__container">
-    <h2 class="popup__title">Новое место</h2>
+    <div class="popup__container">
+      <h2 class="popup__title">Новое место</h2>
 
-    <form class="popup__form popup__add-form" name="form__add-card">
+      <form class="popup__form popup__add-form" name="form__add-card" novalidate>
 
-      <input  id="add-text" type="text" placeholder="Название" name="name" class="popup__input popup__input_card_name">
+        <input id="add-text" type="text" placeholder="Название" name="name" class="popup__input popup__input_card_name"
+          minlength="2" maxlength="30" required>
+        <span class="popup__error add-text-error"></span>
 
-      <input id="add-link" type="url" placeholder="Ссылка на картинку" name="link" class="popup__input popup__input_card-link">
+        <input id="add-link" type="url" placeholder="Ссылка на картинку" name="link"
+          class="popup__input popup__input_card-link" required>
+        <span class="popup__error add-link-error"></span>
 
-      <button class="popup__button-save" type="submit" name="submit">Создать</button>
-    </form>
-        <button class="popup__close" type="button"></button>
+        <button class="popup__button-save" type="submit" name="submit">Создать</button>
+      </form>
+      <button class="popup__close" type="button"></button>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-    <section class="popup popup_image" aria-label="Попап открытие Карточки">
-      <div class="popup__container-image">
-        <img class="popup__card-image">
-        <p class="popup__caption"></p>
-                <button class="popup__close" type="button"></button>
-      </div>
-    </section>
+  <section class="popup popup_image" aria-label="Попап открытие Карточки">
+    <div class="popup__container-image">
+      <img class="popup__card-image">
+      <p class="popup__caption"></p>
+      <button class="popup__close" type="button"></button>
+    </div>
+  </section>
 
   <script src="./scripts/constants.js"></script>
-
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 

@@ -1,32 +1,66 @@
 const popup = document.querySelector('.popup');
+
 const editPopup = document.querySelector('.popup_edit')
+
 const buttonOpenEditProfilePopup = document.querySelector('.profile__edit-button');
+const buttonPopupSave = document.querySelector('.popup__button-save');
 const closeAllButtons = document.querySelectorAll('.popup__close');
+
 const formEditProfile = document.querySelector('.popup__form');
 const nameAuthor = document.querySelector('.profile__info-title');
 const jobAuthor = document.querySelector('.profile__info-subtitle');
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
+
 const popupImage = document.querySelector('.popup_image');
 const popupCaption = document.querySelector('.popup__caption');
 const popupCardImage = document.querySelector('.popup__card-image');
+
 const popupAddCard = document.querySelector('.popup_add-card');
 const formAddElement = document.querySelector('.popup__add-form');
 const addButton = document.querySelector('.profile__add-button');
 const inputAddName = document.querySelector('.popup__input_card-name');
 const inputAddLink = document.querySelector('.popup__input_card-link');
+
 const templateElement = document.querySelector('#elementTemplate').content;
 const elementsCards = document.querySelector('.elements');
+
+
+function addListeners(popup) {
+    document.addEventListener('keydown', closePopupEsc);
+    popup.addEventListener('mousedown', closePopupByClick);
+};
+
+function removeListeners(popup) {
+    document.removeEventListener('keydown', closePopupEsc);
+    popup.removeEventListener('mousedown', closePopupByClick);
+};
+
+function closePopupEsc(evt) {
+    if (evt.key === 'Escape') {
+        const popup = document.querySelector('.popup_opened');
+        closePopup(popup);
+    }
+};
+
+function closePopupByClick(evt) {
+    closePopup(evt.target);
+};
+
 function openPopup(block) {
     block.classList.add('popup_opened');
+    addListeners(block);
 };
+
 function openEditProfileForm() {
     nameInput.value = nameAuthor.textContent;
     jobInput.value = jobAuthor.textContent;
     openPopup(editPopup);
+    resetInput(formEditProfile);
 };
 function closePopup(block) {
     block.classList.remove('popup_opened');
+    removeListeners(block);
 };
 closeAllButtons.forEach(function (button) {
     button.addEventListener('click', function (event) {
@@ -85,6 +119,8 @@ function handleAddFormSubmit(evt) {
 
 addButton.addEventListener('click', function () {
     openPopup(popupAddCard);
+    formAddElement.reset();
+    resetInput(formAddElement);
 });
 buttonOpenEditProfilePopup.addEventListener('click', openEditProfileForm);
 formEditProfile.addEventListener('submit', submitEditProfileForm);
