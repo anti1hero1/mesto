@@ -1,6 +1,6 @@
-const popup = document.querySelector('.popup');
+const mainPopup = document.querySelector('.popup');
 
-const editPopup = document.querySelector('.popup_edit')
+const profilePopup = document.querySelector('.popup_edit')
 
 const buttonOpenEditProfilePopup = document.querySelector('.profile__edit-button');
 const buttonPopupSave = document.querySelector('.popup__button-save');
@@ -44,7 +44,9 @@ function closePopupEsc(evt) {
 };
 
 function closePopupByClick(evt) {
-    closePopup(evt.target);
+    if (evt.target === evt.currentTarget) {
+        closePopup(evt.currentTarget);
+    }
 };
 
 function openPopup(block) {
@@ -55,7 +57,7 @@ function openPopup(block) {
 function openEditProfileForm() {
     nameInput.value = nameAuthor.textContent;
     jobInput.value = jobAuthor.textContent;
-    openPopup(editPopup);
+    openPopup(profilePopup);
     resetInput(formEditProfile);
 };
 function closePopup(block) {
@@ -72,7 +74,7 @@ function submitEditProfileForm(evt) {
     evt.preventDefault();
     nameAuthor.textContent = nameInput.value;
     jobAuthor.textContent = jobInput.value;
-    closePopup(editPopup);
+    closePopup(profilePopup);
 };
 const createElement = (element) => {
     const newElement = templateElement.querySelector('.element').cloneNode(true);
@@ -122,6 +124,8 @@ addButton.addEventListener('click', function () {
     formAddElement.reset();
     resetInput(formAddElement);
 });
+
 buttonOpenEditProfilePopup.addEventListener('click', openEditProfileForm);
 formEditProfile.addEventListener('submit', submitEditProfileForm);
 formAddElement.addEventListener('submit', handleAddFormSubmit);
+

@@ -24,18 +24,6 @@
     </section>
 
     <section class="elements" aria-label="Карточки мест">
-      <template id="elementTemplate">
-        <ul class="element">
-          <li class="element__item">
-            <img class="element__image">
-            <div class="element__image-info">
-              <h2 class="element__title"></h2>
-              <button class="element__like" type="button"></button>
-              <button class="element__image-basket" type="button"></button>
-            </div>
-          </li>
-        </ul>
-      </template>
     </section>
 
   </main>
@@ -91,6 +79,19 @@
       <button class="popup__close" type="button"></button>
     </div>
   </section>
+
+<template id="elementTemplate">
+        <ul class="element">
+          <li class="element__item">
+            <img class="element__image">
+            <div class="element__image-info">
+              <h2 class="element__title"></h2>
+              <button class="element__like" type="button"></button>
+              <button class="element__image-basket" type="button"></button>
+            </div>
+          </li>
+        </ul>
+      </template>
 
   <script src="./scripts/constants.js"></script>
   <script src="./scripts/validate.js"></script>
