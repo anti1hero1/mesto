@@ -42,6 +42,7 @@ const enableValidation = (validationConfig) => {
     });
 };
 enableValidation(config);
+
 function hasInvalidInput(inputList) {
     return inputList.some((inputElement) => {
         return !inputElement.validity.valid;
@@ -62,11 +63,11 @@ function enableButton(button, validationConfig) {
     button.classList.remove(validationConfig.inactiveButtonClass);
     button.disabled = false;
 };
-function resetInput(form) {
-    const inputList = Array.from(form.querySelectorAll('.popup__input'));
-    const button = form.querySelector(config.submitButtonSelector);
-    inputList.forEach(input => {
-        hideError(form, input, config);
+function resetInput(formSelector) {
+    const inputList = Array.from(formSelector.querySelectorAll('.popup__input'));
+    const button = formSelector.querySelector(config.submitButtonSelector);
+    inputList.forEach(inputSelector => {
+        hideError(formSelector, inputSelector, config);
         toggleButtonState(inputList, button, config);
     })
 };
