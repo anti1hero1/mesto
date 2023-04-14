@@ -69,8 +69,7 @@ function resetInput(form, validationConfig) {
     const button = form.querySelector(validationConfig.submitButtonSelector);
     inputList.forEach(input => {
         hideError(form, input, validationConfig);
-        console.log()
+        toggleButtonState(inputList, button, validationConfig);
     })
-    toggleButtonState(inputList, button, validationConfig);
 };
 
