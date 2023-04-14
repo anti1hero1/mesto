@@ -63,11 +63,14 @@ function enableButton(button, validationConfig) {
     button.classList.remove(validationConfig.inactiveButtonClass);
     button.disabled = false;
 };
-function resetInput(formSelector) {
-    const inputList = Array.from(formSelector.querySelectorAll('.popup__input'));
-    const button = formSelector.querySelector(config.submitButtonSelector);
-    inputList.forEach(inputSelector => {
-        hideError(formSelector, inputSelector, config);
-        toggleButtonState(inputList, button, config);
+
+function resetInput(form, validationConfig) {
+    const inputList = Array.from(form.querySelectorAll(validationConfig.inputSelector));
+    const button = form.querySelector(validationConfig.submitButtonSelector);
+    inputList.forEach(input => {
+        hideError(form, input, validationConfig);
+        console.log()
     })
+    toggleButtonState(inputList, button, validationConfig);
 };
+
