@@ -4,14 +4,10 @@
     background: white;
     border-radius: 10px;
     position: relative;
-    margin-left: calc(100vw/2 - 215px);
-    margin-top: calc(100vh/2 - 165px);
 }
 @media screen and (max-width: 920px) {
     .popup__container {
         max-width: 282px;
         min-height: 322px;
-        margin-left: calc(100vw/2 - 140px);
-        margin-top: calc(100vh/2 - 80px);
     }
 }
