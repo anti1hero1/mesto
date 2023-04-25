@@ -1,3 +1,4 @@
+export {elements};
 
 const elements = [
   {
