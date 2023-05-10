@@ -35,14 +35,14 @@
     <div class="popup__container">
       <h2 class="popup__title">Редактировать профиль</h2>
 
-      <form class="popup__form popup__edit-form" name="formPopup" novalidate>
-        <input id="edit-name" name="namePopup" type="text" placeholder="Имя" class="popup__input popup__input_type_name"
-          minlength="2" maxlength="40" required>
-        <span class="popup__error edit-name-error"></span>
+      <form class="popup__form" name="edit-profile" novalidate>
+        <input id="name-input" name="name" type="text" placeholder="Имя" class="popup__input popup__input_type_name"
+          minlength="2" maxlength="40" required >
+        <span class="popup__error name-input-error"></span>
 
-        <input id="edit-job" name="jobPopup" type="text" placeholder="О себе" class="popup__input popup__input_type_job"
-          minlength="2" maxlength="200" required>
-        <span class="popup__error edit-job-error"></span>
+        <input id="job-input" name="job" type="text" placeholder="О себе" class="popup__input popup__input_type_job"
+          minlength="2" maxlength="200" required >
+        <span class="popup__error job-input-error"></span>
 
         <button class="popup__button-save" type="submit" name="submit">Сохранить</button>
       </form>
@@ -55,9 +55,9 @@
     <div class="popup__container">
       <h2 class="popup__title">Новое место</h2>
 
-      <form class="popup__form popup__add-form" name="form__add-card" novalidate>
+      <form class="popup__form" name="add-cards" novalidate>
 
-        <input id="add-text" type="text" placeholder="Название" name="name" class="popup__input popup__input_card_name"
+        <input id="add-text" type="text" placeholder="Название" name="title" class="popup__input popup__input_card_name"
           minlength="2" maxlength="30" required>
         <span class="popup__error add-text-error"></span>
 
@@ -92,6 +92,6 @@
           </li>
         </ul>
       </template>
-  <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="./pages/index.js"></script>
 </body>
 </html>
