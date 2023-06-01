@@ -1,9 +1,6 @@
 .element__image-info {
-  max-width: 246px;
-  padding: 0;
-  margin: 25px 15px 31px 21px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px 25px 21px;
 }

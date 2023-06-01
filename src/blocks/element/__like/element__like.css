@@ -1,14 +1,14 @@
 .element__like {
-  margin-top: 5px;
-  margin-right: 5px;
-  padding: 0;
-  cursor: pointer;
-  background-image: url(../../../images/svg/heart_empty.svg);
-  background-repeat: no-repeat;
-  width: 22px;
-  border: none;
-  background-color: transparent;
-  transition: opacity 1s linear;
+    max-width: 22px;
+    width: 100%;
+    min-height: 19px;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    transition: opacity 1s linear;
+    cursor: pointer;
+    margin-right: 5px;
+    background: center no-repeat url(../../../images/svg/heart_empty.svg);
 }
 .element__like:hover {
   opacity: 0.6;

@@ -5,9 +5,22 @@
     border-radius: 10px;
     position: relative;
 }
+.popup__container_avatar {
+    min-height: 285px;
+}
+.popup__container_delete {
+    min-height: 181px;
+    width: 430px;
+}
+
 @media screen and (max-width: 920px) {
     .popup__container {
         max-width: 282px;
         min-height: 322px;
     }
+    .popup__container_delete {
+    min-height: 181px;
+    width: 430px;
 }
+}
+
