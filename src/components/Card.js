@@ -61,7 +61,7 @@ class Card {
     this.cardLikeButton = this._element.querySelector('.element__like');
     this.cardDeleteButton = this._element.querySelector('.element__image-basket');
     this.cardLikeNumber = this._element.querySelector('.element__like-counter');
-    this.cardLikeNumber.textContent = this._likes.length;
+    this.cardLikeNumber.textContent = `${this._likes.length}`;
     if (this._owner !== this._userId) {
       this.cardDeleteButton.style.display = 'none';
     }
