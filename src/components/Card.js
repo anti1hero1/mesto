@@ -33,7 +33,7 @@ class Card {
 
   toggleLike(data) {
     this._likes = data.likes;
-    this.cardLikeNumber.textContent = this._likes.length;
+    this._element.querySelector('.element__like-counter').textContent = this._likes.length;
     this.cardLikeButton.classList.toggle('element__like_active');
   }
 
